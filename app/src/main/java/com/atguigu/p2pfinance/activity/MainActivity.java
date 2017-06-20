@@ -152,6 +152,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    //另一种初始化控件的方法
     public <T> T getInstance(int id) {
 
         return (T) findViewById(id);

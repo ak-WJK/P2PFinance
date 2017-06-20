@@ -1,6 +1,5 @@
 package com.atguigu.p2pfinance.fragment;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.atguigu.p2pfinance.common.MyApplication;
+import com.atguigu.p2pfinance.R;
 
 /**
  * Created by Administrator on 2017/6/20.
@@ -23,19 +22,15 @@ public class HomeFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        textView = new TextView(MyApplication.getContext());
-        textView.setTextColor(Color.BLACK);
-
-        return textView;
+        View view = inflater.inflate(R.layout.fragment_home, null);
+        return view;
     }
 
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
 
-        textView.setText("HomeFragment");
         super.onActivityCreated(savedInstanceState);
     }
-
 
 }
