@@ -88,16 +88,14 @@ public class AppManager {
     *
     * 删除所有的Activity
     * */
-    public void removeAllActivity(Activity activity) {
-        if (activity != null) {
-            for (int i = 0; i < stack.size(); i++) {
-                Activity currentActivity = stack.get(i);
-                //先销毁当前的activity
-                currentActivity.finish();
-                //再移除,避免了移除后仍然持有activity的引用不能及时回收
-                stack.remove(i);
-            }
+    public void removeAllActivity() {
 
+        for (int i = stack.size(); i >= 0; i--) {
+            Activity currentActivity = stack.get(i);
+            //先销毁当前的activity
+            currentActivity.finish();
+            //再移除,避免了移除后仍然持有activity的引用不能及时回收
+            stack.remove(i);
         }
 
 
