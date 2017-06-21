@@ -11,11 +11,11 @@ import com.atguigu.p2pfinance.common.MyApplication;
 
 public class UIUtils {
 
-    private static View Inflate(int id){
-        return  View.inflate(getContext(),id,null);
+    public static View getInflate(int layoutId) {
+        return View.inflate(getContext(), layoutId, null);
     }
 
-    private static Context getContext(){
+    public static Context getContext() {
         return MyApplication.getContext();
     }
 

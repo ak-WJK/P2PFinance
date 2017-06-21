@@ -1,39 +1,23 @@
 package com.atguigu.p2pfinance.fragment;
 
-import android.graphics.Color;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
 
-import com.atguigu.p2pfinance.common.MyApplication;
+import com.atguigu.p2pfinance.base.BaseFragment;
 
 /**
  * Created by Administrator on 2017/6/20.
  */
 
-public class InvesFragment extends Fragment {
+public class InvesFragment extends BaseFragment {
 
 
-    private TextView textView;
-
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        textView = new TextView(MyApplication.getContext());
-        textView.setTextColor(Color.BLACK);
-
-        return textView;
+    public View initView() {
+        return null;
     }
 
-
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+    protected void initData() {
 
-        textView.setText("InvesFragment");
-        super.onActivityCreated(savedInstanceState);
     }
 }
